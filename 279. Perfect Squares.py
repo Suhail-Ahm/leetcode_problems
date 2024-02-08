@@ -5,7 +5,7 @@ class Solution:
         for i in range(1, n + 1):
             min_squares = float("inf")
             for square in squares:
-                if square > 1:
+                if square > i:
                     break
                 min_squares = min(min_squares, dp[i - square] + 1)
             dp[i] = min_squares
